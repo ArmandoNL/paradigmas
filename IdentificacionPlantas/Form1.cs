@@ -13,18 +13,25 @@ namespace IdentificacionPlantas
 {
     public partial class FormInicio : Form
     {
+        Proceso proceso;
+        
         public FormInicio()
         {
             InitializeComponent();
+            proceso = new Proceso(); //se inicializa la clase proceso donde se maneja la matriz de caracteristicas
         }
 
 
         private void btnEliptica_Click(object sender, EventArgs e)
         {
-
+            proceso.formaHoja("Elíptica");
         }
 
-        private void label2_Click(object sender, EventArgs e)
+
+      
+
+
+        private void label2_Click(object sender, EventArgs e) //no borrar
         {
 
         }
@@ -33,5 +40,32 @@ namespace IdentificacionPlantas
         {
 
         }
+
+        private void btnRomboidal_Click(object sender, EventArgs e)
+        {
+            proceso.formaHoja("Romboidal");
+        }
+
+        private void btnObovada_Click(object sender, EventArgs e)
+        {
+            proceso.formaHoja("Obovada");
+        }
+
+        private void btnOblonga_Click(object sender, EventArgs e)
+        {
+            proceso.formaHoja("Oblonga");
+        }
+
+        private void btnLanceolada_Click(object sender, EventArgs e)
+        {
+            proceso.formaHoja("Lanceolada");
+        }
+
+        private void btnOvada_Click(object sender, EventArgs e)
+        {
+            proceso.formaHoja("Ovada");
+        }
+
+        
     }
 }

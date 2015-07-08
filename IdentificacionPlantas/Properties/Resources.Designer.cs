@@ -103,6 +103,16 @@ namespace IdentificacionPlantas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ovada {
+            get {
+                object obj = ResourceManager.GetObject("ovada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap romboiadal {
             get {
                 object obj = ResourceManager.GetObject("romboiadal", resourceCulture);

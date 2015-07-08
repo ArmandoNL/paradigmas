@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnOvada = new System.Windows.Forms.Button();
             this.btnLanceolada = new System.Windows.Forms.Button();
             this.btnOblonga = new System.Windows.Forms.Button();
             this.btnObovada = new System.Windows.Forms.Button();
@@ -61,46 +62,60 @@
             this.label2.Text = "Escoja forma de la hoja:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // btnOvada
+            // 
+            this.btnOvada.BackgroundImage = global::IdentificacionPlantas.Properties.Resources.ovada;
+            this.btnOvada.Location = new System.Drawing.Point(997, 327);
+            this.btnOvada.Name = "btnOvada";
+            this.btnOvada.Size = new System.Drawing.Size(96, 208);
+            this.btnOvada.TabIndex = 14;
+            this.btnOvada.UseVisualStyleBackColor = true;
+            this.btnOvada.Click += new System.EventHandler(this.btnOvada_Click);
+            // 
             // btnLanceolada
             // 
             this.btnLanceolada.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLanceolada.BackgroundImage")));
-            this.btnLanceolada.Location = new System.Drawing.Point(871, 327);
+            this.btnLanceolada.Location = new System.Drawing.Point(816, 327);
             this.btnLanceolada.Name = "btnLanceolada";
             this.btnLanceolada.Size = new System.Drawing.Size(132, 208);
             this.btnLanceolada.TabIndex = 13;
             this.btnLanceolada.UseVisualStyleBackColor = true;
+            this.btnLanceolada.Click += new System.EventHandler(this.btnLanceolada_Click);
             // 
             // btnOblonga
             // 
             this.btnOblonga.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOblonga.BackgroundImage")));
-            this.btnOblonga.Location = new System.Drawing.Point(691, 327);
+            this.btnOblonga.Location = new System.Drawing.Point(651, 327);
             this.btnOblonga.Name = "btnOblonga";
             this.btnOblonga.Size = new System.Drawing.Size(125, 208);
             this.btnOblonga.TabIndex = 12;
             this.btnOblonga.UseVisualStyleBackColor = true;
+            this.btnOblonga.Click += new System.EventHandler(this.btnOblonga_Click);
             // 
             // btnObovada
             // 
             this.btnObovada.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnObovada.BackgroundImage")));
-            this.btnObovada.Location = new System.Drawing.Point(514, 327);
+            this.btnObovada.Location = new System.Drawing.Point(469, 327);
             this.btnObovada.Name = "btnObovada";
             this.btnObovada.Size = new System.Drawing.Size(121, 208);
             this.btnObovada.TabIndex = 11;
             this.btnObovada.UseVisualStyleBackColor = true;
+            this.btnObovada.Click += new System.EventHandler(this.btnObovada_Click);
             // 
             // btnRomboidal
             // 
             this.btnRomboidal.BackgroundImage = global::IdentificacionPlantas.Properties.Resources.romboiadal;
-            this.btnRomboidal.Location = new System.Drawing.Point(344, 327);
+            this.btnRomboidal.Location = new System.Drawing.Point(292, 327);
             this.btnRomboidal.Name = "btnRomboidal";
             this.btnRomboidal.Size = new System.Drawing.Size(119, 208);
             this.btnRomboidal.TabIndex = 10;
             this.btnRomboidal.UseVisualStyleBackColor = true;
+            this.btnRomboidal.Click += new System.EventHandler(this.btnRomboidal_Click);
             // 
             // btnEliptica
             // 
             this.btnEliptica.BackgroundImage = global::IdentificacionPlantas.Properties.Resources.eliptica1;
-            this.btnEliptica.Location = new System.Drawing.Point(151, 327);
+            this.btnEliptica.Location = new System.Drawing.Point(109, 327);
             this.btnEliptica.Name = "btnEliptica";
             this.btnEliptica.Size = new System.Drawing.Size(118, 208);
             this.btnEliptica.TabIndex = 9;
@@ -113,6 +128,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1211, 754);
+            this.Controls.Add(this.btnOvada);
             this.Controls.Add(this.btnLanceolada);
             this.Controls.Add(this.btnOblonga);
             this.Controls.Add(this.btnObovada);
@@ -138,6 +154,7 @@
         private System.Windows.Forms.Button btnObovada;
         private System.Windows.Forms.Button btnOblonga;
         private System.Windows.Forms.Button btnLanceolada;
+        private System.Windows.Forms.Button btnOvada;
 
     }
 }

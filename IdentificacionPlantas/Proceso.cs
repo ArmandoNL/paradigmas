@@ -8,9 +8,37 @@ namespace IdentificacionPlantas
 {
     class Proceso
     {
-        String[][] caracteristicas = new String[28][];
-        String[] preguntas = new String[9];
-        String[] especie = new String[28];
+        public String[][] caracteristicas = new String[28][];
+        public String[] preguntas = new String[9];
+        public String[] especie = new String[28];
+        public int[] filasFiltro = new int[20];
+        public String formaHoja;
+        public int contador;
+
+
+        public void formaHoja(String forma)
+        {
+            int j=1;
+            for (int i = 1; i < 28; i++) {
+                if (caracteristicas[i][1] == forma) {
+                    contador++;
+                    filasFiltro[0] = contador;
+                    filasFiltro[j] = i;
+                }
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
 
         public void cargarMatriz()
         {
