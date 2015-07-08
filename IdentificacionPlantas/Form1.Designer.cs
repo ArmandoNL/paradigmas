@@ -123,6 +123,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormInicio";
             this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.FormInicio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
