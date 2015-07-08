@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentificacionPlantas", "IdentificacionPlantas\IdentificacionPlantas.csproj", "{5F24859C-0322-4808-840F-F4FBA60A0665}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8174654D-1E60-448F-85C9-32E1AA4F023F}"
+	ProjectSection(SolutionItems) = preProject
+		IdentificacionPlantas\Moraceae.xlsx = IdentificacionPlantas\Moraceae.xlsx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
