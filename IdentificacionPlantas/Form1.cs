@@ -24,7 +24,7 @@ namespace IdentificacionPlantas
 
         private void btnEliptica_Click(object sender, EventArgs e)
         {
-            proceso.formaHoja("Elíptica");
+            procesarInfo("Elíptica");
         }
 
 
@@ -41,29 +41,34 @@ namespace IdentificacionPlantas
 
         private void btnRomboidal_Click(object sender, EventArgs e)
         {
-            proceso.formaHoja("Romboidal");
+            procesarInfo("Romboidal");
         }
 
         private void btnObovada_Click(object sender, EventArgs e)
         {
-            proceso.formaHoja("Obovada");
+            procesarInfo("Obovada");
         }
 
         private void btnOblonga_Click(object sender, EventArgs e)
         {
-            proceso.formaHoja("Oblonga");
+            procesarInfo("Oblonga");
         }
 
         private void btnLanceolada_Click(object sender, EventArgs e)
         {
-            proceso.formaHoja("Lanceolada");
+            procesarInfo("Lanceolada");
         }
 
         private void btnOvada_Click(object sender, EventArgs e)
         {
-            proceso.formaHoja("Ovada");
+            procesarInfo("Ovada");
         }
 
-        
+        protected void procesarInfo(String forma)
+        {
+            proceso.formaHoja(forma);
+            new Pregunta2().Show();
+            this.Hide();
+        }
     }
 }

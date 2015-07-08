@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radioEntero = new System.Windows.Forms.RadioButton();
             this.radioAserrado = new System.Windows.Forms.RadioButton();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,11 +71,23 @@
             this.radioAserrado.Text = "Aserrado: borde con dientes";
             this.radioAserrado.UseVisualStyleBackColor = true;
             // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Location = new System.Drawing.Point(267, 177);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(106, 31);
+            this.btnSiguiente.TabIndex = 3;
+            this.btnSiguiente.Text = "Siguiente >>";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
             // Pregunta2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 215);
+            this.ClientSize = new System.Drawing.Size(385, 220);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.radioAserrado);
             this.Controls.Add(this.radioEntero);
             this.Controls.Add(this.label1);
@@ -90,5 +103,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioEntero;
         private System.Windows.Forms.RadioButton radioAserrado;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }
