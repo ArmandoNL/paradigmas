@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace IdentificacionPlantas
 {
-    public partial class FormInicio : Form
+    public partial class Pregunta6 : Form
     {
-        public FormInicio()
+        public Pregunta6()
         {
             InitializeComponent();
-        }
-
-        private void btnEliptica_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

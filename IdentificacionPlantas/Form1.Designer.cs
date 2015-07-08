@@ -1,6 +1,6 @@
 ﻿namespace IdentificacionPlantas
 {
-    partial class Form1
+    partial class FormInicio
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLanceolada = new System.Windows.Forms.Button();
@@ -107,7 +107,7 @@
             this.btnEliptica.UseVisualStyleBackColor = true;
             this.btnEliptica.Click += new System.EventHandler(this.btnEliptica_Click);
             // 
-            // Form1
+            // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -121,8 +121,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormInicio";
+            this.Text = "Inicio";
             this.ResumeLayout(false);
             this.PerformLayout();
 
