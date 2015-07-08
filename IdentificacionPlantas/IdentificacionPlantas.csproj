@@ -32,26 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LinqToExcel">
-      <HintPath>..\packages\LinqToExcel.1.10.1\lib\LinqToExcel.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Microsoft.Office.Interop.MSProject, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Remotion">
-      <HintPath>..\packages\LinqToExcel.1.10.1\lib\Remotion.dll</HintPath>
-    </Reference>
-    <Reference Include="Remotion.Data.Linq">
-      <HintPath>..\packages\LinqToExcel.1.10.1\lib\Remotion.Data.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="Remotion.Interfaces">
-      <HintPath>..\packages\LinqToExcel.1.10.1\lib\Remotion.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -65,33 +47,94 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManejoExcel.cs" />
-    <Compile Include="Procesamiento.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pregunta2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregunta2.Designer.cs">
+      <DependentUpon>Pregunta2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregunta3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregunta3.Designer.cs">
+      <DependentUpon>Pregunta3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregunta4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregunta4.Designer.cs">
+      <DependentUpon>Pregunta4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregunta5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregunta5.Designer.cs">
+      <DependentUpon>Pregunta5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregunta6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregunta6.Designer.cs">
+      <DependentUpon>Pregunta6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregunta7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregunta7.Designer.cs">
+      <DependentUpon>Pregunta7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregunta8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregunta8.Designer.cs">
+      <DependentUpon>Pregunta8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pregunta2.resx">
+      <DependentUpon>Pregunta2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregunta3.resx">
+      <DependentUpon>Pregunta3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregunta4.resx">
+      <DependentUpon>Pregunta4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregunta5.resx">
+      <DependentUpon>Pregunta5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregunta6.resx">
+      <DependentUpon>Pregunta6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregunta7.resx">
+      <DependentUpon>Pregunta7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregunta8.resx">
+      <DependentUpon>Pregunta8.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -102,15 +145,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="ExcelAdaptorLib">
-      <Guid>{A5CF7763-9769-4540-B101-9DC5426D0B22}</Guid>
-      <VersionMajor>12</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
+    <None Include="Resources\eliptica11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliptica1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oblonga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\romboiadal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\obovada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oblonga1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lanceolada.png" />
+  </ItemGroup>
+  <ItemGroup>
     <COMReference Include="ExcelClientPkgLib">
       <Guid>{2AEB050F-097F-4969-8E95-685279032F9B}</Guid>
       <VersionMajor>12</VersionMajor>
@@ -120,18 +175,6 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>5</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
