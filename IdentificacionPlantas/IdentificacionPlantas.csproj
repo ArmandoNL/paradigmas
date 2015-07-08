@@ -53,24 +53,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pregunta2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pregunta2.Designer.cs">
-      <DependentUpon>Pregunta2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pregunta3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pregunta3.Designer.cs">
-      <DependentUpon>Pregunta3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pregunta4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pregunta4.Designer.cs">
-      <DependentUpon>Pregunta4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pregunta5.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,15 +81,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pregunta2.resx">
-      <DependentUpon>Pregunta2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pregunta3.resx">
-      <DependentUpon>Pregunta3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pregunta4.resx">
-      <DependentUpon>Pregunta4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pregunta5.resx">
       <DependentUpon>Pregunta5.cs</DependentUpon>
