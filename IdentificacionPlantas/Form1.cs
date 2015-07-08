@@ -28,9 +28,6 @@ namespace IdentificacionPlantas
         }
 
 
-      
-
-
         private void label2_Click(object sender, EventArgs e) //no borrar
         {
 
@@ -40,6 +37,7 @@ namespace IdentificacionPlantas
         {
 
         }
+
 
         private void btnRomboidal_Click(object sender, EventArgs e)
         {

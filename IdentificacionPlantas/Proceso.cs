@@ -12,12 +12,13 @@ namespace IdentificacionPlantas
         public String[] preguntas = new String[9];
         public String[] especie = new String[28];
         public int[] filasFiltro = new int[20];
-        public String formaHoja;
+
         public int contador;
 
 
         public void formaHoja(String forma)
         {
+            cargarMatriz();
             int j=1;
             for (int i = 1; i < 28; i++) {
                 if (caracteristicas[i][1] == forma) {
@@ -29,14 +30,6 @@ namespace IdentificacionPlantas
             }
 
         }
-
-
-
-
-
-
-
-
 
 
 
