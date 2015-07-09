@@ -28,7 +28,19 @@ namespace IdentificacionPlantas
                 borde = "Entero";
             }
 
-            proceso.bordeHoja(borde);
+            proceso.filtros(borde, 0);
+            if (proceso.respuesta() == 0)
+            {
+                MessageBox.Show("La especie no se encuentra");
+                new FormInicio().Show();
+                this.Hide();
+            }
+            else
+            {
+                new Pregunta3().Show();
+                this.Hide();
+            }
+           
         }
     }
 }

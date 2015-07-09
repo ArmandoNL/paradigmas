@@ -73,10 +73,10 @@
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguiente.Location = new System.Drawing.Point(267, 177);
+            this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Location = new System.Drawing.Point(281, 177);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(106, 31);
+            this.btnSiguiente.Size = new System.Drawing.Size(92, 31);
             this.btnSiguiente.TabIndex = 3;
             this.btnSiguiente.Text = "Siguiente >>";
             this.btnSiguiente.UseVisualStyleBackColor = true;

@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radioLargo = new System.Windows.Forms.RadioButton();
             this.radioCorto = new System.Windows.Forms.RadioButton();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,11 +71,22 @@
             this.radioCorto.Text = "Corto: menos de 2cm";
             this.radioCorto.UseVisualStyleBackColor = true;
             // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.Location = new System.Drawing.Point(299, 189);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(88, 32);
+            this.btnSiguiente.TabIndex = 3;
+            this.btnSiguiente.Text = "Siguiente >>";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
             // Pregunta5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 224);
+            this.ClientSize = new System.Drawing.Size(399, 233);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.radioCorto);
             this.Controls.Add(this.radioLargo);
             this.Controls.Add(this.label1);
@@ -90,5 +102,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioLargo;
         private System.Windows.Forms.RadioButton radioCorto;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }

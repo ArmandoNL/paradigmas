@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radioPocas = new System.Windows.Forms.RadioButton();
             this.radioMuchas = new System.Windows.Forms.RadioButton();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,11 +71,22 @@
             this.radioMuchas.Text = "Muchas: más de 10";
             this.radioMuchas.UseVisualStyleBackColor = true;
             // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.Location = new System.Drawing.Point(357, 201);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(92, 34);
+            this.btnSiguiente.TabIndex = 3;
+            this.btnSiguiente.Text = "Siguiente >>";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
             // Pregunta8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 220);
+            this.ClientSize = new System.Drawing.Size(461, 247);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.radioMuchas);
             this.Controls.Add(this.radioPocas);
             this.Controls.Add(this.label1);
@@ -90,5 +102,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioPocas;
         private System.Windows.Forms.RadioButton radioMuchas;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }

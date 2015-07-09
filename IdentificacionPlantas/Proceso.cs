@@ -11,7 +11,7 @@ namespace IdentificacionPlantas
     {
         public static String[,] caracteristicas;
         public static String[] preguntas = new String[9];
-        public static String[] especie = new String[28];
+        public static String[] especie;
         public static int[] filasFiltro = new int[20];
 
         
@@ -36,13 +36,13 @@ namespace IdentificacionPlantas
             Debug.WriteLine("esto es:" + filasFiltro[0]);
         }
 
-        public void bordeHoja(String borde)
+        public void filtros(String borde, int columna)
         {
             int j = 1;
             int contador= 0;
             for (int i = 1; i <= filasFiltro[0]; i++)
             {
-                if (caracteristicas[filasFiltro[i], 0] == borde)
+                if (caracteristicas[filasFiltro[i], columna] == borde)
                 {
                     contador++;
                     filasFiltro[j] = filasFiltro[i];
@@ -54,9 +54,20 @@ namespace IdentificacionPlantas
             Debug.WriteLine("esto es:" + filasFiltro[0]);
         }
 
+        public int respuesta()
+        {
+            return filasFiltro[0];
+        }
+
+        public String Especie()
+        {
+            return especie[filasFiltro[1]];
+        }
 
         public void cargarMatriz()
         {
+            especie = new String[27] {"Clarisia biflora", "Dorstenia choconiana", "Ficus americana", "Ficus aurea","Ficus brevibracteata ","Ficus cervantesiana ","Ficus citrifolia ","Ficus colubrinae ","Ficus costaricana ","Ficus crassiuscula ","Ficus crocata ","Ficus hartwegii","Ficus macbridei","Ficus obtusifolia"," Ficus paraensis ","Ficus pertusa ","Ficus tonduzii ","Ficus velutina ","Ficus yoponensis ","Maquira guianensis ","Naucleopsis capirensis"," Pseudolmedia glabrata","Pseudolmedia mollis ","Sorocea pubivena ","Sorocea trophoides ","Trophis mexicana ","Trophis racemosa" };
+
             caracteristicas = new String[27, 8] {
                 {"Aserrado",	"Elíptica",	"Larga",	"Angosta",	"Largo",	"Brillante",	"Glabro",	"Pocas"},
                 {"Aserrado",	"Romboidal",	"Larga",	"Ancha",	"Corto",	"Opaco",	"Glabro",	"Pocas"},

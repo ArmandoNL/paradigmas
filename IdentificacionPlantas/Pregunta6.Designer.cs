@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radioBrillante = new System.Windows.Forms.RadioButton();
             this.radioOpaco = new System.Windows.Forms.RadioButton();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -72,11 +73,22 @@
             this.radioOpaco.Text = "Opaco: sin brillo";
             this.radioOpaco.UseVisualStyleBackColor = false;
             // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.Location = new System.Drawing.Point(359, 185);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(91, 33);
+            this.btnSiguiente.TabIndex = 3;
+            this.btnSiguiente.Text = "Siguiente >>";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
             // Pregunta6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 198);
+            this.ClientSize = new System.Drawing.Size(470, 230);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.radioOpaco);
             this.Controls.Add(this.radioBrillante);
             this.Controls.Add(this.label1);
@@ -92,5 +104,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioBrillante;
         private System.Windows.Forms.RadioButton radioOpaco;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }

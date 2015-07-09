@@ -12,9 +12,44 @@ namespace IdentificacionPlantas
 {
     public partial class Pregunta7 : Form
     {
+        Proceso proceso;
+        public string largo;
+
         public Pregunta7()
         {
             InitializeComponent();
+            proceso = new Proceso();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            if (radioPubescente.Checked)
+            {
+                largo = "Pubescente";
+            }
+            else if (radioGlabro.Checked)
+            {
+                largo = "Glabro";
+            }
+
+            proceso.filtros(largo, 6);
+            if (proceso.respuesta() == 0)
+            {
+                MessageBox.Show("La especie no se encuentra");
+                new FormInicio().Show();
+                this.Hide();
+            }
+            else if (proceso.respuesta() == 1)
+            {
+                MessageBox.Show("Su planta es: " + proceso.Especie());
+                new FormInicio().Show();
+                this.Hide();
+            }
+            else
+            {
+                new Pregunta8().Show();
+                this.Hide();
+            }
         }
     }
 }

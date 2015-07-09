@@ -31,16 +31,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radioAncha = new System.Windows.Forms.RadioButton();
             this.radioAngosta = new System.Windows.Forms.RadioButton();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Chocolate;
             this.label1.Location = new System.Drawing.Point(34, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 25);
+            this.label1.Size = new System.Drawing.Size(278, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Describa el ancho de la hoja";
             // 
@@ -70,11 +71,22 @@
             this.radioAngosta.Text = "Angosta: menos de 8cm";
             this.radioAngosta.UseVisualStyleBackColor = true;
             // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.Location = new System.Drawing.Point(263, 198);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(94, 32);
+            this.btnSiguiente.TabIndex = 3;
+            this.btnSiguiente.Text = "Siguiente >>";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
             // Pregunta4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 233);
+            this.ClientSize = new System.Drawing.Size(370, 242);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.radioAngosta);
             this.Controls.Add(this.radioAncha);
             this.Controls.Add(this.label1);
@@ -90,5 +102,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioAncha;
         private System.Windows.Forms.RadioButton radioAngosta;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }
