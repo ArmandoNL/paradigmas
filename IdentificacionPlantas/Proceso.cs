@@ -13,6 +13,8 @@ namespace IdentificacionPlantas
         public static String[] preguntas = new String[9];
         public static String[] especie;
         public static int[] filasFiltro = new int[20];
+        static List<int> visitados = new List<int>();
+            
 
 
 
@@ -24,6 +26,8 @@ namespace IdentificacionPlantas
         public void formaHoja(String forma)
         {
             cargarMatriz();
+            visitados.Add(1);
+
             int contador = 0;
             int j = 1;
             for (int i = 0; i < 27; i++)
@@ -37,7 +41,6 @@ namespace IdentificacionPlantas
                 }
 
             }
-            Debug.WriteLine("esto es:" + filasFiltro[0]);
             proximaPregunta();
         }
 
@@ -91,8 +94,6 @@ namespace IdentificacionPlantas
          */
         public void proximaPregunta()
         {
-            List<int> visitados = new List<int>();
-            visitados.Add(1);
             int[] pregunta = new int[8];
 
             for (int columna = 0; columna < 8; ++columna)
@@ -126,6 +127,27 @@ namespace IdentificacionPlantas
                     }
                 }
             }
+            int preg = buscarPregunta(pregunta);
+            visitados.Add(preg);
+        }
+
+        /*
+         *Efecto:
+         *Requiere:
+         *Modifica:
+         */
+        public int buscarPregunta(int[] vec)
+        {
+            int resp = 0;
+
+            for (int i = 0; i < 8; ++i)
+            {
+                if (vec[i] > resp)
+                {
+                    resp = vec[i];
+                }
+            }
+            return resp;
         }
 
         /*
