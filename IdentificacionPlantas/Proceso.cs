@@ -16,7 +16,11 @@ namespace IdentificacionPlantas
 
         
 
-
+        /*
+         *Efecto:
+         *Requiere:
+         *Modifica:
+         */
         public void formaHoja(String forma)
         {
             cargarMatriz();
@@ -36,6 +40,11 @@ namespace IdentificacionPlantas
             Debug.WriteLine("esto es:" + filasFiltro[0]);
         }
 
+        /*
+         *Efecto:
+         *Requiere:
+         *Modifica:
+         */
         public void filtros(String borde, int columna)
         {
             int j = 1;
@@ -54,16 +63,31 @@ namespace IdentificacionPlantas
             Debug.WriteLine("esto es:" + filasFiltro[0]);
         }
 
+        /*
+         *Efecto:
+         *Requiere:
+         *Modifica:
+         */
         public int respuesta()
         {
             return filasFiltro[0];
         }
 
+        /*
+         *Efecto:
+         *Requiere:
+         *Modifica:
+         */
         public String Especie()
         {
             return especie[filasFiltro[1]];
         }
 
+        /*
+         *Efecto:
+         *Requiere:
+         *Modifica:
+         */
         public void cargarMatriz()
         {
             especie = new String[27] {"Clarisia biflora", "Dorstenia choconiana", "Ficus americana", "Ficus aurea","Ficus brevibracteata ","Ficus cervantesiana ","Ficus citrifolia ","Ficus colubrinae ","Ficus costaricana ","Ficus crassiuscula ","Ficus crocata ","Ficus hartwegii","Ficus macbridei","Ficus obtusifolia"," Ficus paraensis ","Ficus pertusa ","Ficus tonduzii ","Ficus velutina ","Ficus yoponensis ","Maquira guianensis ","Naucleopsis capirensis"," Pseudolmedia glabrata","Pseudolmedia mollis ","Sorocea pubivena ","Sorocea trophoides ","Trophis mexicana ","Trophis racemosa" };
