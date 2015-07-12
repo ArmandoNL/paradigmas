@@ -14,7 +14,7 @@ namespace IdentificacionPlantas
         public static String[] especie;
         public static int[] filasFiltro = new int[20];
 
-        
+
 
         /*
          *Efecto:
@@ -38,6 +38,7 @@ namespace IdentificacionPlantas
 
             }
             Debug.WriteLine("esto es:" + filasFiltro[0]);
+            proximaPregunta();
         }
 
         /*
@@ -48,7 +49,7 @@ namespace IdentificacionPlantas
         public void filtros(String borde, int columna)
         {
             int j = 1;
-            int contador= 0;
+            int contador = 0;
             for (int i = 1; i <= filasFiltro[0]; i++)
             {
                 if (caracteristicas[filasFiltro[i], columna] == borde)
@@ -88,9 +89,53 @@ namespace IdentificacionPlantas
          *Requiere:
          *Modifica:
          */
+        public void proximaPregunta()
+        {
+            List<int> visitados = new List<int>();
+            visitados.Add(1);
+            int[] pregunta = new int[8];
+
+            for (int columna = 0; columna < 8; ++columna)
+            {
+
+                if (visitados.Contains(columna) == false)
+                {
+                    String s1;
+                    int i1 = 0, i2 = 0;
+                    s1 = caracteristicas[filasFiltro[1], columna];
+                    i1++;
+
+                    for (int fila = 2; fila <= filasFiltro[0]; ++fila)
+                    {
+                        if (caracteristicas[filasFiltro[fila], columna].Equals(s1))
+                        {
+                            i1++;
+                        }
+                        else
+                        {
+                            i2++;
+                        }
+                    }
+                    if (i1 >= i2)
+                    {
+                        pregunta[columna] = i1 / i2;
+                    }
+                    else
+                    {
+                        pregunta[columna] = i2 / i1;
+                    }
+                }
+            }
+        }
+
+        /*
+         *Efecto:
+         *Requiere:
+         *Modifica:
+         */
         public void cargarMatriz()
         {
-            especie = new String[27] {"Clarisia biflora", "Dorstenia choconiana", "Ficus americana", "Ficus aurea","Ficus brevibracteata ","Ficus cervantesiana ","Ficus citrifolia ","Ficus colubrinae ","Ficus costaricana ","Ficus crassiuscula ","Ficus crocata ","Ficus hartwegii","Ficus macbridei","Ficus obtusifolia"," Ficus paraensis ","Ficus pertusa ","Ficus tonduzii ","Ficus velutina ","Ficus yoponensis ","Maquira guianensis ","Naucleopsis capirensis"," Pseudolmedia glabrata","Pseudolmedia mollis ","Sorocea pubivena ","Sorocea trophoides ","Trophis mexicana ","Trophis racemosa" };
+            especie = new String[27] { "Clarisia biflora", "Dorstenia choconiana", "Ficus americana", "Ficus aurea", "Ficus brevibracteata ", "Ficus cervantesiana ", "Ficus citrifolia ", "Ficus colubrinae ", "Ficus costaricana ", "Ficus crassiuscula ", "Ficus crocata ", "Ficus hartwegii", "Ficus macbridei", "Ficus obtusifolia", " Ficus paraensis ", "Ficus pertusa ", "Ficus tonduzii ", "Ficus velutina ", "Ficus yoponensis ", "Maquira guianensis ", "Naucleopsis capirensis", " Pseudolmedia glabrata", "Pseudolmedia mollis ", "Sorocea pubivena ", "Sorocea trophoides ", "Trophis mexicana ", "Trophis racemosa" };
 
             caracteristicas = new String[27, 8] {
                 {"Aserrado",	"Elíptica",	"Larga",	"Angosta",	"Largo",	"Brillante",	"Glabro",	"Pocas"},

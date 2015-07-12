@@ -67,8 +67,17 @@ namespace IdentificacionPlantas
         protected void procesarInfo(String forma)
         {
             proceso.formaHoja(forma);
-            new Pregunta2().Show();
-            this.Hide();
+            if (proceso.respuesta() == 1)
+            {
+                MessageBox.Show("Su planta es: " + proceso.Especie());
+                new FormInicio().Show();
+                this.Hide();
+            }
+            else
+            {
+                new Pregunta2().Show();
+                this.Hide();
+            }
         }
     }
 }

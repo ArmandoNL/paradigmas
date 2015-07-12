@@ -35,12 +35,17 @@ namespace IdentificacionPlantas
                 new FormInicio().Show();
                 this.Hide();
             }
+            else if(proceso.respuesta()==1)
+            {
+                MessageBox.Show("Su planta es: " + proceso.Especie());
+                new FormInicio().Show();
+                this.Hide();
+            }
             else
             {
                 new Pregunta3().Show();
                 this.Hide();
             }
-           
         }
     }
 }
