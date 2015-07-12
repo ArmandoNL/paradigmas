@@ -92,7 +92,7 @@ namespace IdentificacionPlantas
          *Requiere:
          *Modifica:
          */
-        public void proximaPregunta()
+        public int proximaPregunta()
         {
             int[] pregunta = new int[8];
 
@@ -128,7 +128,7 @@ namespace IdentificacionPlantas
                 }
             }
             int preg = buscarPregunta(pregunta);
-            visitados.Add(preg);
+            return preg;
         }
 
         /*
@@ -139,13 +139,25 @@ namespace IdentificacionPlantas
         public int buscarPregunta(int[] vec)
         {
             int resp = 0;
-
+            int mayor = 0;
             for (int i = 0; i < 8; ++i)
             {
-                if (vec[i] > resp)
+                if (vec[i] > mayor)
                 {
-                    resp = vec[i];
+                    resp = i;
+                    mayor = vec[i];
                 }
+            }
+
+            visitados.Add(resp);
+            
+            if (resp == 0)
+            {
+                resp = 2;
+            }
+            else
+            {
+                resp++;
             }
             return resp;
         }
