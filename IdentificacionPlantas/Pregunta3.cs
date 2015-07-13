@@ -54,7 +54,7 @@ namespace IdentificacionPlantas
             }
             else
             {
-                new Pregunta4().Show();
+                proceso.proximaPregunta();
                 this.Hide();
             }
         }

@@ -92,7 +92,7 @@ namespace IdentificacionPlantas
          *Requiere:
          *Modifica:
          */
-        public int proximaPregunta()
+        public void proximaPregunta()
         {
             int[] pregunta = new int[8];
 
@@ -127,8 +127,7 @@ namespace IdentificacionPlantas
                     }
                 }
             }
-            int preg = buscarPregunta(pregunta);
-            return preg;
+            activarPregunta(buscarPregunta(pregunta));
         }
 
         /*
@@ -136,7 +135,7 @@ namespace IdentificacionPlantas
          *Requiere:
          *Modifica:
          */
-        public int buscarPregunta(int[] vec)
+        protected int buscarPregunta(int[] vec)
         {
             int resp = 0;
             int mayor = 0;
@@ -160,6 +159,39 @@ namespace IdentificacionPlantas
                 resp++;
             }
             return resp;
+        }
+
+        /*
+         *Efecto:
+         *Requiere:
+         *Modifica:
+         */
+        protected void activarPregunta(int siguienteForm)
+        {
+            switch (siguienteForm)
+            {
+                case 2:
+                    new Pregunta2().Show();
+                    break;
+                case 3:
+                    new Pregunta3().Show();
+                    break;
+                case 4:
+                    new Pregunta4().Show();
+                    break;
+                case 5:
+                    new Pregunta5().Show();
+                    break;
+                case 6:
+                    new Pregunta6().Show();
+                    break;
+                case 7:
+                    new Pregunta7().Show();
+                    break;
+                case 8:
+                    new Pregunta8().Show();
+                    break;
+            }
         }
 
         /*
