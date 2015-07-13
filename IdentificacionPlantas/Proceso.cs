@@ -14,7 +14,7 @@ namespace IdentificacionPlantas
         public static String[] especie;//contiene las especies de plantas conocidas
         public static int[] filasFiltro = new int[20];//vector para almacenar el # de fila de la matriz que cumple con el filtro
         static List<int> visitados = new List<int>();//lista de preguntas realizadas
-            
+
 
         /*
          *Efecto: a partir de la forma realizada, se mueve por la matriz aplicando el filtro por la forma de la hoja. Además carga la matriz.
@@ -55,7 +55,7 @@ namespace IdentificacionPlantas
                 {
                     contador++;
                     filasFiltro[j] = filasFiltro[i];//con cada filro se reduce el # de filas, se actualiza el vector con los filas 
-                                                    //que cumplen el filtro
+                    //que cumplen el filtro
                     j++;
                 }
             }
@@ -153,7 +153,7 @@ namespace IdentificacionPlantas
             }
 
             visitados.Add(resp);//agregamos a la lista la pregunta que realizaremos, para no utilizarla nuevamente
-            
+
             if (resp == 0)//adaptamos la respuesta a los form
             {
                 resp = 2;
@@ -209,13 +209,13 @@ namespace IdentificacionPlantas
             filtros(filtro, columna);
             if (respuesta() == 0)//si no hay solución
             {
-                MessageBox.Show("La especie no se encuentra");
+                MessageBox.Show("Su planta no pertenece a la familia de las Moraceae.");
                 new FormInicio().Show();
 
             }
             else if (respuesta() == 1)//si hay solución
             {
-                MessageBox.Show("Su planta es: " + Especie());
+                MessageBox.Show("Su planta es: " + Especie() + ".");
                 new FormInicio().Show();
             }
             else//si es necesario realizar otra pregunta
