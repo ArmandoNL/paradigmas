@@ -13,7 +13,7 @@ namespace IdentificacionPlantas
     public partial class Pregunta3 : Form
     {
         Proceso proceso;
-        public String largo;
+        public String caracteristica;
 
         public Pregunta3()
         {
@@ -36,14 +36,14 @@ namespace IdentificacionPlantas
 
             if (radioCorta.Checked)//verifica la opción seleccionada
             {
-                largo = "Corta";
+                caracteristica = "Corta";
             }
             else if (radioLargo.Checked)
             {
-                largo = "Larga";
+                caracteristica = "Larga";
             }
 
-            proceso.decidir(largo, 2);//invoca el método para decidir
+            proceso.decidir(caracteristica, 2);//invoca el método para decidir
             this.Hide();//cierra la interfaz
         }
     }

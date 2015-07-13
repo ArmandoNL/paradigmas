@@ -13,7 +13,7 @@ namespace IdentificacionPlantas
     public partial class Pregunta4 : Form
     {
         Proceso proceso;
-        public String largo;
+        public String caracteristica;
 
         public Pregunta4()
         {
@@ -31,14 +31,14 @@ namespace IdentificacionPlantas
 
             if (radioAngosta.Checked)
             {
-                largo = "Angosta";
+                caracteristica = "Angosta";
             }
             else if (radioAncha.Checked)
             {
-                largo = "Ancha";
+                caracteristica = "Ancha";
             }
 
-            proceso.decidir(largo, 3);//invoca el método para decidir
+            proceso.decidir(caracteristica, 3);//invoca el método para decidir
             this.Hide();//cierra la interfaz
         }
     }

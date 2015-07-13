@@ -13,7 +13,7 @@ namespace IdentificacionPlantas
     public partial class Pregunta2 : Form
     {
         Proceso proceso;
-        public static String borde;
+        public static String caracteristica;
         public Pregunta2()
         {
             InitializeComponent();
@@ -29,14 +29,14 @@ namespace IdentificacionPlantas
         {
             if (radioAserrado.Checked)//verifica la opción seleccionada
             {
-                borde = "Aserrado";
+                caracteristica = "Aserrado";
             }
             else if (radioEntero.Checked)
             {
-                borde = "Entero";
+                caracteristica = "Entero";
             }
 
-            proceso.decidir(borde, 0);//invoca el método para decidir
+            proceso.decidir(caracteristica, 0);//invoca el método para decidir
             this.Hide();//cierra la interfaz
         }
     }

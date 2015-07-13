@@ -13,7 +13,7 @@ namespace IdentificacionPlantas
     public partial class Pregunta7 : Form
     {
         Proceso proceso;
-        public string largo;
+        public string caracteristica;
 
         public Pregunta7()
         {
@@ -21,35 +21,24 @@ namespace IdentificacionPlantas
             proceso = new Proceso();
         }
 
+        /*
+         *Efecto: invoca el método para procesar la información del filtro seleccionado y el método para decidir que acción tomar.
+         *Requiere: que se presione el botón.
+         *Modifica: N/A
+         */
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             if (radioPubescente.Checked)
             {
-                largo = "Pubescente";
+                caracteristica = "Pubescente";
             }
             else if (radioGlabro.Checked)
             {
-                largo = "Glabro";
+                caracteristica = "Glabro";
             }
 
-            proceso.filtros(largo, 6);
-            if (proceso.respuesta() == 0)
-            {
-                MessageBox.Show("La especie no se encuentra");
-                new FormInicio().Show();
-                this.Hide();
-            }
-            else if (proceso.respuesta() == 1)
-            {
-                MessageBox.Show("Su planta es: " + proceso.Especie());
-                new FormInicio().Show();
-                this.Hide();
-            }
-            else
-            {
-                proceso.proximaPregunta();
-                this.Hide();
-            }
+            proceso.decidir(caracteristica, 6);//invoca el método para decidir
+            this.Hide();//cierra la interfaz
         }
     }
 }
