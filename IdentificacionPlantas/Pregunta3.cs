@@ -13,7 +13,7 @@ namespace IdentificacionPlantas
     public partial class Pregunta3 : Form
     {
         Proceso proceso;
-        public String caracteristica;
+        public String caracteristica;//almacenar la característica a almacenar
 
         public Pregunta3()
         {

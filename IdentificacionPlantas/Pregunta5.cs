@@ -14,7 +14,7 @@ namespace IdentificacionPlantas
     {
 
         Proceso proceso;
-        public String caracteristica;
+        public String caracteristica;//almacenar la característica a almacenar
 
         public Pregunta5()
         {
