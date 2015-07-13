@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace IdentificacionPlantas
 {
@@ -195,6 +196,26 @@ namespace IdentificacionPlantas
                 case 8:
                     new Pregunta8().Show();
                     break;
+            }
+        }
+
+        public void decidir(String filtro, int columna)
+        {
+            filtros(filtro, columna);
+            if (respuesta() == 0)
+            {
+                MessageBox.Show("La especie no se encuentra");
+                new FormInicio().Show();
+
+            }
+            else if (respuesta() == 1)
+            {
+                MessageBox.Show("Su planta es: " + Especie());
+                new FormInicio().Show();
+            }
+            else
+            {
+                proximaPregunta();
             }
         }
 
