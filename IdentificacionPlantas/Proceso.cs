@@ -9,43 +9,40 @@ namespace IdentificacionPlantas
 {
     class Proceso
     {
-        public static String[,] caracteristicas;
-        public static String[] preguntas = new String[9];
-        public static String[] especie;
-        public static int[] filasFiltro = new int[20];
-        static List<int> visitados = new List<int>();
+        public static String[,] caracteristicas;//matriz de características
+        public static String[] especie;//contiene las especies de plantas conocidas
+        public static int[] filasFiltro = new int[20];//vector para almacenar el # de fila de la matriz que cumple con el filtro
+        static List<int> visitados = new List<int>();//lista de preguntas realizadas
             
 
-
-
         /*
-         *Efecto:
-         *Requiere:
-         *Modifica:
+         *Efecto: a partir de la forma realizada, se mueve por la matriz aplicando el filtro por la forma de la hoja. Además carga la matriz.
+         *Requiere: que se haga la primera pregunta y entre como parámetro la forma de la hoja.
+         *Modifica: la matriz de características, la lista visitados y el vector filasFiltro.
          */
         public void formaHoja(String forma)
         {
-            cargarMatriz();
-            visitados.Add(1);
+            cargarMatriz();//cargamos la matriz de características
+            visitados.Add(1);//como siempre realizamos la pregunta 1 primero, la agregamos a la lista de preguntas visitadas
 
-            int contador = 0;
-            int j = 1;
-            for (int i = 0; i < 27; i++)
+            int contador = 0;//para contar el númere de filas que cumplen con el filtro
+            int j = 1;//para movernos por el vector de filas
+            for (int i = 0; i < 27; i++)//para movernos por cada una de las filas
             {
-                if (caracteristicas[i, 1] == forma)
+                if (caracteristicas[i, 1] == forma)//para verificar que cumpla el filtro
                 {
                     contador++;
-                    filasFiltro[0] = contador;
-                    filasFiltro[j] = i;
+                    filasFiltro[j] = i;//agregamos al vector la fila en la que estamos
                     j++;
                 }
             }
+            filasFiltro[0] = contador;//agregamos en la primera posición el número de filas con el que estamos trabajando
         }
 
         /*
-         *Efecto:
-         *Requiere:
-         *Modifica:
+         *Efecto: aplica los 7 filros restantes a las filas que se encuentran en el vector filasFiltro.
+         *Requiere: la entrada del estring a filtrar y el número de la columna en la matriz que corresponde a la pregunta.
+         *Modifica: modifica el vector filasFiltro.
          */
         public void filtros(String borde, int columna)
         {
@@ -56,19 +53,18 @@ namespace IdentificacionPlantas
                 if (caracteristicas[filasFiltro[i], columna] == borde)
                 {
                     contador++;
-                    filasFiltro[j] = filasFiltro[i];
+                    filasFiltro[j] = filasFiltro[i];//con cada filro se reduce el # de filas, se actualiza el vector con los filas 
+                                                    //que cumplen el filtro
                     j++;
                 }
-
             }
-            filasFiltro[0] = contador;
-            Debug.WriteLine("esto es:" + filasFiltro[0]);
+            filasFiltro[0] = contador;//actualizamos el total de filas
         }
 
         /*
-         *Efecto:
-         *Requiere:
-         *Modifica:
+         *Efecto: devuelve el total de filas que cumplen con el filtro.
+         *Requiere: que el vector de filasFiltro esté inicializado.
+         *Modifica: N/A
          */
         public int respuesta()
         {
@@ -76,9 +72,9 @@ namespace IdentificacionPlantas
         }
 
         /*
-         *Efecto:
-         *Requiere:
-         *Modifica:
+         *Efecto: devuelve la especie que corresponde a la última fila que se encuentra en filasFiltro.
+         *Requiere: que ambos vectores estén inicializados.
+         *Modifica: N/A
          */
         public String Especie()
         {
@@ -86,27 +82,27 @@ namespace IdentificacionPlantas
         }
 
         /*
-         *Efecto:
-         *Requiere:
-         *Modifica:
+         *Efecto: verifica las filas filtradas para determinar cuál pregunta es la más discriminante.
+         *Requiere: que el vector filasFiltro, la matriz de características y la lista de visitados estén inicialiados.
+         *Modifica: N/A
          */
         public void proximaPregunta()
         {
-            int[] pregunta = new int[8];
+            int[] pregunta = new int[8];//vector para almacenar las estadísticas de cada pregunta
 
-            for (int columna = 0; columna < 8; ++columna)
+            for (int columna = 0; columna < 8; ++columna)//para movernos por las preguntas
             {
 
-                if (visitados.Contains(columna) == false)
+                if (visitados.Contains(columna) == false)//solo analizamos las preguntas que no se han realizado
                 {
-                    String s1;
-                    int i1 = 0, i2 = 0;
-                    s1 = caracteristicas[filasFiltro[1], columna];
-                    i1++;
+                    String s1;//para almacenar la característica
+                    int i1 = 0, i2 = 0;//para acumular el número de veces que aparece cada característica
+                    s1 = caracteristicas[filasFiltro[1], columna];//guardamos la primera característica que aparece
+                    i1++;//actualizamos el contador
 
-                    for (int fila = 2; fila <= filasFiltro[0]; ++fila)
+                    for (int fila = 2; fila <= filasFiltro[0]; ++fila)//nos movemos por las filas del victor de filtroFilas
                     {
-                        if (caracteristicas[filasFiltro[fila], columna].Equals(s1))
+                        if (caracteristicas[filasFiltro[fila], columna].Equals(s1))//verificamos las características para actualizar los contadores
                         {
                             i1++;
                         }
@@ -115,7 +111,9 @@ namespace IdentificacionPlantas
                             i2++;
                         }
                     }
-                    if (i1 == 0 || i2 == 0)
+                    //en el vector guardamos la división del mayor ente el menor # de apariciones de las características
+                    //ya que el resultado mayor indica la pregunta a realizar, es la más discriminante
+                    if (i1 == 0 || i2 == 0)//si alguno es 0, esa pregunta no discrimina.
                     {
                         pregunta[columna] = 0;
                     }
@@ -129,31 +127,33 @@ namespace IdentificacionPlantas
                     }
                 }
             }
-            int preg = buscarPregunta(pregunta);
-            activarPregunta(preg);
+            int preg = buscarPregunta(pregunta);//llamamos al método que busca la pregunta a realizar a partir del vector
+            activarPregunta(preg);//activa la interfaz correspondiente al # de pregunta
         }
 
         /*
-         *Efecto:
-         *Requiere:
-         *Modifica:
+         *Efecto: busca la pregunta a realizar a partir del vector de estadísticas.
+         *Requiere: la entrada del vector.
+         *Modifica:N/A
          */
         protected int buscarPregunta(int[] vec)
         {
             int resp = 0;
             int mayor = 0;
+            //se mueve por el vector para buscar el valor más alto y guarda la posición, ya 
+            //que esta corresponde a la pregunta a realizar
             for (int i = 0; i < 8; ++i)
             {
-                if (vec[i] > mayor)
+                if (vec[i] > mayor)//si el valor en el vector es mayor al que tenemos hacemos el cambio
                 {
                     resp = i;
                     mayor = vec[i];
                 }
             }
 
-            visitados.Add(resp);
+            visitados.Add(resp);//agregamos a la lista la pregunta que realizaremos, para no utilizarla nuevamente
             
-            if (resp == 0)
+            if (resp == 0)//adaptamos la respuesta a los form
             {
                 resp = 2;
             }
@@ -161,17 +161,18 @@ namespace IdentificacionPlantas
             {
                 resp++;
             }
-            return resp;
+
+            return resp;//devolvemos el número de pregunta a realizar
         }
 
         /*
-         *Efecto:
-         *Requiere:
-         *Modifica:
+         *Efecto: activa el form que pertenece a la siguiente pregunta.
+         *Requiere: la entrada del número de pregunta a realizar.
+         *Modifica: la interfaz.
          */
         protected void activarPregunta(int siguienteForm)
         {
-            switch (siguienteForm)
+            switch (siguienteForm)//dependiendo del # de pregunta, activa el form correspondiente.
             {
                 case 2:
                     new Pregunta2().Show();
@@ -198,9 +199,9 @@ namespace IdentificacionPlantas
         }
 
         /*
-         *Efecto:
-         *Requiere:
-         *Modifica:
+         *Efecto: carga los datos de la matriz de características y el vector de especies.
+         *Requiere: la inicialización de la clase.
+         *Modifica: el vector de especie y la matriz de características.
          */
         public void cargarMatriz()
         {
