@@ -14,7 +14,7 @@ namespace IdentificacionPlantas
     {
         Proceso proceso;
         public String largo;
-        
+
         public Pregunta3()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace IdentificacionPlantas
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            
+
             if (radioCorta.Checked)
             {
                 largo = "Corta";
@@ -38,7 +38,7 @@ namespace IdentificacionPlantas
                 largo = "Larga";
             }
 
-            proceso.filtros(largo,2);
+            proceso.filtros(largo, 2);
             if (proceso.respuesta() == 0)
             {
                 MessageBox.Show("La especie no se encuentra");
@@ -46,7 +46,7 @@ namespace IdentificacionPlantas
                 this.Hide();
 
             }
-            else if(proceso.respuesta()==1)
+            else if (proceso.respuesta() == 1)
             {
                 MessageBox.Show("Su planta es: " + proceso.Especie());
                 new FormInicio().Show();

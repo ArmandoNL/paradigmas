@@ -46,6 +46,11 @@ namespace IdentificacionPlantas
                 new FormInicio().Show();
                 this.Hide();
             }
+            else
+            {
+                proceso.proximaPregunta();
+                this.Hide();
+            }
         }
     }
 }

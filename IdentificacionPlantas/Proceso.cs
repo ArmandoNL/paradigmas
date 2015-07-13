@@ -39,9 +39,7 @@ namespace IdentificacionPlantas
                     filasFiltro[j] = i;
                     j++;
                 }
-
             }
-            proximaPregunta();
         }
 
         /*
@@ -117,7 +115,11 @@ namespace IdentificacionPlantas
                             i2++;
                         }
                     }
-                    if (i1 >= i2)
+                    if (i1 == 0 || i2 == 0)
+                    {
+                        pregunta[columna] = 0;
+                    }
+                    else if (i1 >= i2)
                     {
                         pregunta[columna] = i1 / i2;
                     }
@@ -127,7 +129,8 @@ namespace IdentificacionPlantas
                     }
                 }
             }
-            activarPregunta(buscarPregunta(pregunta));
+            int preg = buscarPregunta(pregunta);
+            activarPregunta(preg);
         }
 
         /*
