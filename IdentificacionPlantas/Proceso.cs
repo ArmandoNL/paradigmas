@@ -199,21 +199,26 @@ namespace IdentificacionPlantas
             }
         }
 
+        /*
+         *Efecto: decide a partir del número de filas resultantes del filtro si se encontró o no una solución, o si es necesaria otra pregunta.
+         *Requiere: 
+         *Modifica: la interfaz.
+         */
         public void decidir(String filtro, int columna)
         {
             filtros(filtro, columna);
-            if (respuesta() == 0)
+            if (respuesta() == 0)//si no hay solución
             {
                 MessageBox.Show("La especie no se encuentra");
                 new FormInicio().Show();
 
             }
-            else if (respuesta() == 1)
+            else if (respuesta() == 1)//si hay solución
             {
                 MessageBox.Show("Su planta es: " + Especie());
                 new FormInicio().Show();
             }
-            else
+            else//si es necesario realizar otra pregunta
             {
                 proximaPregunta();
             }
